@@ -1,0 +1,2 @@
+[23:57:44.411][DEBUG][com.leichuangkj.logback.LogbackApplicationTests][main] Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+[23:57:47.336][DEBUG][com.leichuangkj.logback.LogbackApplicationTests][main] log level:debug

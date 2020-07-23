@@ -1,0 +1,2 @@
+[23:47:46.378][WARN][com.leichuangkj.logback.LogbackApplicationTests][main] log level:warn
+[23:47:46.380][ERROR][com.leichuangkj.logback.LogbackApplicationTests][main] log level:error

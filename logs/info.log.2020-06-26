@@ -1,0 +1,4 @@
+[23:47:42.011][INFO][com.leichuangkj.logback.LogbackApplicationTests][main] Starting LogbackApplicationTests on stevendeMacBook-Pro.local with PID 1005 (started by steven in /Users/steven/Documents/代码/springBoot/logback)
+[23:47:42.035][INFO][com.leichuangkj.logback.LogbackApplicationTests][main] No active profile set, falling back to default profiles: default
+[23:47:45.799][INFO][com.leichuangkj.logback.LogbackApplicationTests][main] Started LogbackApplicationTests in 4.363 seconds (JVM running for 6.471)
+[23:47:46.378][INFO][com.leichuangkj.logback.LogbackApplicationTests][main] log level:info

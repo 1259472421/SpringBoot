@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>用户列表</title>
+    </head>
+    <body>
+        <form action="" method="post">
+            <table width="100%" border=1>
+                <tr>
+                    <td>序号</td>
+                    <td>用户名</td>
+                    <td>邮箱</td>
+                </tr>
+                <tr th:each="user:${users}">
+                    <td th:text="${user.id}"></td>
+                    <td th:text="${user.name}"></td>
+                    <td th:text="${user.email}"></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

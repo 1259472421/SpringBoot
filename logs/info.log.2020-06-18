@@ -1,0 +1,4 @@
+[00:05:23.697][INFO][com.leichuangkj.logback.LogbackApplicationTests][main] Starting LogbackApplicationTests on 192.168.0.106 with PID 8864 (started by steven in /Users/steven/Documents/代码/springBoot/logback)
+[00:05:23.701][INFO][com.leichuangkj.logback.LogbackApplicationTests][main] No active profile set, falling back to default profiles: default
+[00:05:26.975][INFO][com.leichuangkj.logback.LogbackApplicationTests][main] Started LogbackApplicationTests in 4.135 seconds (JVM running for 7.461)
+[00:05:27.347][INFO][com.leichuangkj.logback.LogbackApplicationTests][main] log level:info

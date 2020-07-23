@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="60 seconds" debug="false">
+    <appender name="debug" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!--输出文件位置-->
+        <File>/Users/steven/Documents/代码/springBoot/logs/debug.log</File>
+        <!--编码-->
+        <encoder>
+            <pattern>[%d{HH:mm:ss.SSS}][%p][%c{200}][%t] %m%n</pattern>
+            <immediateFlush>true</immediateFlush>
+        </encoder>
+        <!--日志级别-->
+        <filter class = "ch.qos.logback.classic.filter.LevelFilter">
+            <level>DEBUG</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <!--滚动输出策略，归档文件名字-->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>/Users/steven/Documents/代码/springBoot/logs/debug.log.%d{yyyy-MM-dd}</fileNamePattern>
+        </rollingPolicy>
+    </appender>
+
+    <appender name="info" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>/Users/steven/Documents/代码/springBoot/logs/info.log</File>
+        <encoder>
+            <pattern>[%d{HH:mm:ss.SSS}][%p][%c{200}][%t] %m%n</pattern>
+            <immediateFlush>true</immediateFlush>
+        </encoder>
+
+        <filter class = "ch.qos.logback.classic.filter.LevelFilter">
+            <level>INFO</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>/Users/steven/Documents/代码/springBoot/logs/info.log.%d{yyyy-MM-dd}</fileNamePattern>
+        </rollingPolicy>
+    </appender>
+
+    <appender name="warn" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>/Users/steven/Documents/代码/springBoot/logs/warn.log</File>
+        <encoder>
+            <pattern>[%d{HH:mm:ss.SSS}][%p][%c{200}][%t] %m%n</pattern>
+        </encoder>
+
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>warn</level>
+        </filter>
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>/Users/steven/Documents/代码/springBoot/logs/warn.log.%d{yyyy-MM-dd}</fileNamePattern>
+        </rollingPolicy>
+    </appender>
+
+    <appender name="error" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>/Users/steven/Documents/代码/springBoot/logs/error.log</File>
+        <encoder>
+            <pattern>[%d{HH:mm:ss.SSS}][%p][%c{200}][%t] %m%n</pattern>
+        </encoder>
+
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>error</level>
+        </filter>
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>/Users/steven/Documents/代码/springBoot/logs/error.log.%d{yyyy-MM-dd}</fileNamePattern>
+        </rollingPolicy>
+    </appender>
+
+    <!--全局日志级别-->
+    <!--设置某个包或者类使用哪个appender-->
+    <logger name="com.leichuangkj.logback" additivity="false">
+        <appender-ref ref="debug" />
+        <appender-ref ref="info"/>
+        <appender-ref ref="warn"/>
+        <appender-ref ref="error"/>
+    </logger>
+    <root level="debug"></root>
+</configuration>
